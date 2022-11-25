@@ -1,3 +1,4 @@
+import Blog from "../../Pages/Blog/Blog";
 import Login from "../../Pages/Login/Login";
 import ErrorPage from "../../Pages/Shared/Error/ErrorPage";
 
@@ -13,6 +14,10 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+      },
+      {
+        path: "/blog",
+        element: <Blog></Blog>,
       },
       {
         path: "/login",
