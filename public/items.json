@@ -1,0 +1,74 @@
+[
+  {
+    "category_id": "1",
+    "original_price": 400,
+    "resell_price": 250,
+    "used": "2 years",
+    "posted_time": "26 November 2022",
+    "category_name": "Action & Adventure",
+    "location": "Tomsombridge, Cumilla",
+    "seller_name": "Ekra Rahman",
+    "book_name": "Tintin",
+    "image_url": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fGJvb2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    "category_id": "1",
+    "original_price": 450,
+    "resell_price": 280,
+    "used": "2.5 years",
+    "posted_time": "26 November 2022",
+    "category_name": "Action & Adventure",
+    "location": "Mirpur, Dhaka",
+    "seller_name": "Arman Rahman",
+    "book_name": "Lee Child",
+    "image_url": "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Ym9va3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    "category_id": "2",
+    "original_price": 200,
+    "resell_price": 150,
+    "used": "1 year",
+    "posted_time": "26 November 2022",
+    "category_name": "Comics & Fantasy",
+    "location": "Maijdee, Noakhali",
+    "seller_name": "Fahim Rahman",
+    "book_name": "The Lost Metal",
+    "image_url": "https://images.unsplash.com/photo-1634163332762-f91ad35d7d87?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Nnw3OTA3NDR8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    "category_id": "2",
+    "original_price": 300,
+    "resell_price": 200,
+    "used": "3 years",
+    "posted_time": "26 November 2022",
+    "category_name": "Comics & Fantasy",
+    "location": "Mirsharai, Chittagong",
+    "seller_name": "Samin Khan",
+    "book_name": "Nantaru",
+    "image_url": "https://images.unsplash.com/photo-1538062324047-cba01633dab1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTV8NzkwNzQ0fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    "category_id": "3",
+    "original_price": 800,
+    "resell_price": 350,
+    "used": "1 years",
+    "posted_time": "26 November 2022",
+    "category_name": "Literary Fiction",
+    "location": "AK Khan, Chittagong",
+    "seller_name": "Kabir Siddque",
+    "book_name": "Harper Lee",
+    "image_url": "https://images.unsplash.com/photo-1527132404543-e40be8fb94b9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MjR8NzkwNzQ0fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+  },
+  {
+    "category_id": "3",
+    "original_price": 500,
+    "resell_price": 250,
+    "used": "3 years",
+    "posted_time": "26 November 2022",
+    "category_name": "Literary Fiction",
+    "location": "Tomsombridge, Cumilla",
+    "seller_name": "Ekra Rahman",
+    "book_name": "Pride & Prejudice",
+    "image_url": "https://images.unsplash.com/photo-1523689094115-65c863cf262d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mzh8NzkwNzQ0fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+  }
+]

@@ -1,4 +1,5 @@
 import Blog from "../../Pages/Blog/Blog";
+import CategoryCollection from "../../Pages/CategoryCollection/CategoryCollection";
 import Login from "../../Pages/Login/Login";
 import ErrorPage from "../../Pages/Shared/Error/ErrorPage";
 import SignUp from "../../Pages/SignUp/SignUp";
@@ -27,6 +28,10 @@ export const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>,
+      },
+      {
+        path: "/category/items",
+        element: <CategoryCollection></CategoryCollection>,
       },
     ],
     errorElement: <ErrorPage></ErrorPage>,
