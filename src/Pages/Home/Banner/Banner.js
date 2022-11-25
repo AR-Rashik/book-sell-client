@@ -143,7 +143,7 @@ const Banner = () => {
                 </div>
               </div>
             </nav> */}
-            <div className="pt-32 lg:flex items-center relative z-10 container mx-auto">
+            <div className="lg:p-20 pt-32 lg:flex items-center relative z-10 container mx-auto">
               <div className="w-5/6 lg:w-1/2 h-full lg:pr-10 xl:pr-0">
                 <img
                   tabIndex="0"
