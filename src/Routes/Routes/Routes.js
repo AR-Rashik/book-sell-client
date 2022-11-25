@@ -1,4 +1,5 @@
 import Login from "../../Pages/Login/Login";
+import ErrorPage from "../../Pages/Shared/Error/ErrorPage";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../../Layout/Main");
@@ -18,5 +19,6 @@ export const router = createBrowserRouter([
         element: <Login></Login>,
       },
     ],
+    errorElement: <ErrorPage></ErrorPage>,
   },
 ]);

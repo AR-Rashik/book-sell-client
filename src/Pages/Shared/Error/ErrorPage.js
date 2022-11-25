@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ErrorPage = () => {
   return (
@@ -20,11 +21,11 @@ const ErrorPage = () => {
           alt=""
         />
       </div>
-      <div className="w-full lg:w-1/2">
-        <h1 className="py-4 text-3xl lg:text-4xl font-extrabold text-gray-800">
+      <div className="w-full lg:w-1/2 font-medium">
+        <h1 className="py-6 text-3xl lg:text-4xl font-extrabold text-gray-800">
           Looks like you've found the doorway to the great nothing
         </h1>
-        <p className="py-4 text-base text-gray-800">
+        <p className="py-2 text-base text-gray-800">
           The content you’re looking for doesn’t exist. Either it was removed,
           or you mistyped the link.
         </p>
@@ -32,9 +33,11 @@ const ErrorPage = () => {
           Sorry about that! Please visit our homepage to get where you need to
           go.
         </p>
-        <button className="w-full lg:w-auto my-4 border rounded-md px-1 sm:px-16 py-5 bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-opacity-50">
-          Go back to Homepage
-        </button>
+        <Link to="/">
+          <button className="w-full lg:w-auto my-8 border rounded-md px-1 sm:px-16 py-5 bg-indigo-600 text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-700 focus:ring-opacity-50">
+            Go back to Homepage
+          </button>
+        </Link>
       </div>
     </div>
   );
