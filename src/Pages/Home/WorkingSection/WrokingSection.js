@@ -3,7 +3,7 @@ import React from "react";
 const WrokingSection = () => {
   return (
     <div>
-      <div classname="overflow-y-hidden bg-gray-100">
+      <div className="overflow-y-hidden bg-gray-100">
         <div className="mx-auto container f-f-p px-4 xl:px-0 py-24">
           <h2 className="focus:outline-none text-center text-3xl lg:text-4xl font-extrabold lg:leading-9 tracking-wider text-gray-900">
             How it works?
@@ -22,7 +22,7 @@ const WrokingSection = () => {
                   <img
                     className="focus:outline-none mt-24"
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg2.svg"
-                    alt
+                    alt=""
                   />
                 </div>
                 <div className="flex mt-12 flex-col items-center lg:items-end md:w-8/12">
@@ -38,20 +38,20 @@ const WrokingSection = () => {
                   <img
                     className="focus:outline-none mt-24"
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg3.svg"
-                    alt
+                    alt=""
                   />
                 </div>
                 <img
                   className="hidden md:block absolute right-0 top-0 -mt-2 -mr-1"
                   src="https://cdn.tuk.dev/assets/components/111220/Fs7/line.png"
-                  alt
+                  alt=""
                 />
               </div>
               <div className="flex flex-col items-center md:items-start md:pl-12 lg:border-gray-400 mt-20 md:mt-0 md:w-1/2">
                 <div aria-label={1} role="img">
                   <img
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg4.svg"
-                    alt
+                    alt=""
                   />
                 </div>
                 <div className="flex mt-6 flex-col items-center md:items-start md:w-8/12">
@@ -67,14 +67,14 @@ const WrokingSection = () => {
                   <img
                     className="focus:outline-none mt-32"
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg5.svg"
-                    alt
+                    alt=""
                   />
                 </div>
                 <div aria-label={3} role="img">
                   <img
                     className="focus:outline-none mt-20"
                     src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg6.svg"
-                    alt
+                    alt=""
                   />
                 </div>
                 <div className="flex mt-6 flex-col items-center md:items-start md:w-8/12">
@@ -96,7 +96,7 @@ const WrokingSection = () => {
               />
               <img
                 src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg4.svg"
-                alt
+                alt=""
               />
               <div className="mt-10">
                 <h1 className="text-xl text-center tracking-wide leading-5 font-bold">
@@ -110,7 +110,7 @@ const WrokingSection = () => {
               <img
                 className="focus:outline-none my-10"
                 src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg5.svg"
-                alt
+                alt=""
               />
               <img
                 src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg2.svg"
@@ -128,12 +128,12 @@ const WrokingSection = () => {
               <img
                 className="focus:outline-none my-10"
                 src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg3.svg"
-                alt
+                alt=""
               />
               <img
                 className
                 src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg6.svg"
-                alt
+                alt=""
               />
               <div className="flex mt-10 flex-col items-center md:items-start md:w-8/12">
                 <h1 className="text-xl text-center tracking-wide leading-5 font-bold">
