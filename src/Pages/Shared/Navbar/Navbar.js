@@ -1,18 +1,18 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
-// import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
+import { AuthContext } from "../../../Contexts/AuthProvider/AuthProvider";
 
 const Header = () => {
   const [mdOptionsToggle, setMdOptionsToggle] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
 
-  // const { user, logOut } = useContext(AuthContext);
+  const { user, logOut } = useContext(AuthContext);
 
-  // const handleLogOut = () => {
-  //   logOut()
-  //     .then()
-  //     .catch((error) => console.error("Logout Error: ", error));
-  // };
+  const handleLogOut = () => {
+    logOut()
+      .then()
+      .catch((error) => console.error("Logout Error: ", error));
+  };
 
   return (
     <div className="dark:bg-gray-900">
@@ -45,24 +45,24 @@ const Header = () => {
                     Blog
                   </Link>
                 </li>
-                {/* {user?.email ? (
+                {user?.email ? (
                   <>
-                    <li>
+                    {/* <li>
                       <Link
                         to="/myreviews"
                         className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                       >
                         My Reviews
                       </Link>
-                    </li>
-                    <li>
+                    </li> */}
+                    {/* <li>
                       <Link
                         to="/addservice"
                         className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                       >
                         Add Service
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <button
                         onClick={handleLogOut}
@@ -81,7 +81,7 @@ const Header = () => {
                       Login
                     </Link>
                   </li>
-                )} */}
+                )}
               </ul>
               <div className="md:w-2/12 justify-end flex items-center space-x-4 xl:space-x-8">
                 <div className="flex lg:hidden">

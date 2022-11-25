@@ -148,7 +148,6 @@ const WrokingSection = () => {
           </div>
         </div>
       </div>
-      ;
     </div>
   );
 };
