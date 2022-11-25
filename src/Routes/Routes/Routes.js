@@ -30,8 +30,10 @@ export const router = createBrowserRouter([
         element: <SignUp></SignUp>,
       },
       {
-        path: "/category/items",
+        path: "/category/:id",
         element: <CategoryCollection></CategoryCollection>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/categories/${params.id}`),
       },
     ],
     errorElement: <ErrorPage></ErrorPage>,

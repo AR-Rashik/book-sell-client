@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import CollectionCard from "./CollectionCard";
 
 const CategoryCollection = () => {
-  const [items, setItems] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:5000/categories")
-      .then((res) => res.json())
-      .then((data) => setItems(data));
-  }, []);
+  // const [items, setItems] = useState([]);
+  // useEffect(() => {
+  //   fetch("")
+  //     .then((res) => res.json())
+  //     .then((data) => setItems(data));
+  // }, []);
+
+  const items = useLoaderData();
 
   return (
     <div className="2xl:mx-auto 2xl:container">
