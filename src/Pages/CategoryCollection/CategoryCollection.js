@@ -1,15 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useLoaderData } from "react-router-dom";
 import CollectionCard from "./CollectionCard";
 
 const CategoryCollection = () => {
-  // const [items, setItems] = useState([]);
-  // useEffect(() => {
-  //   fetch("")
-  //     .then((res) => res.json())
-  //     .then((data) => setItems(data));
-  // }, []);
-
   const items = useLoaderData();
 
   return (
@@ -18,7 +11,7 @@ const CategoryCollection = () => {
         <h2 className="focus:outline-none text-center text-3xl lg:text-4xl font-extrabold lg:leading-9 tracking-wider text-gray-900">
           Select your preferred books
         </h2>
-        <h3 className="text-xl text-center">Total item: {items.length}</h3>
+        <h3 className="text-xl text-center mt-3">Total: {items.length}</h3>
         <div className="flex justify-center">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 lg:mt-16 md:mt-12 mt-8 items-center">
             {items.map((item) => (
