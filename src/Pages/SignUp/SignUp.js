@@ -1,11 +1,12 @@
 import React, { useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import toast from "react-hot-toast";
+import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 
 const SignUp = () => {
   const [showpass, setShowPass] = useState(false);
 
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUser } = useContext(AuthContext);
 
   // useTitle("Sign Up");
 
@@ -21,6 +22,15 @@ const SignUp = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        toast.success("User created successfully");
+        const userInfo = {
+          displayName: name,
+        };
+        updateUser(userInfo)
+          .then(() => {})
+          .catch((err) => {
+            console.error("Update user error: ", err);
+          });
 
         form.reset();
       })
