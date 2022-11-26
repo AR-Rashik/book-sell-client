@@ -3,6 +3,7 @@ import CategoryCollection from "../../Pages/CategoryCollection/CategoryCollectio
 import Login from "../../Pages/Login/Login";
 import ErrorPage from "../../Pages/Shared/Error/ErrorPage";
 import SignUp from "../../Pages/SignUp/SignUp";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../../Layout/Main");
@@ -31,7 +32,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/category/:id",
-        element: <CategoryCollection></CategoryCollection>,
+        element: (
+          <PrivateRoute>
+            <CategoryCollection></CategoryCollection>
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/categories/${params.id}`),
       },
