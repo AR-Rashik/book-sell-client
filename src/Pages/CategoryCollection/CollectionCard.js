@@ -18,6 +18,35 @@ const CollectionCard = ({ item }) => {
     image_url,
   } = item;
 
+  // const handleAddBooking = (event) => {
+  //   event.preventDefault();
+
+  //   const form = event.target;
+
+  //   const
+
+  //   const booking = {
+
+  //   };
+
+  //   fetch("https://server-home-made.vercel.app/services", {
+  //     method: "POST",
+  //     headers: {
+  //       "content-type": "application/json",
+  //     },
+  //     body: JSON.stringify(service),
+  //   })
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       console.log(data);
+  //       if (data.acknowledged) {
+  //         setShow(true);
+  //         form.reset();
+  //       }
+  //     })
+  //     .catch((error) => console.error("Item post errors: ", error));
+  // };
+
   return (
     <div className="mx-2 w-72 lg:mb-0 mb-8 hover:shadow-indigo-200 hover:shadow-2xl transition duration-150 ease-in-out">
       <div>
@@ -74,7 +103,7 @@ const CollectionCard = ({ item }) => {
           <div className="flex items-center justify-start py-4">
             {/* Modal */}
             <div>
-              <div>
+              <form>
                 {show && (
                   <div
                     className="py-12 bg-transparent dark:transparent bg-opacity-80 transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0"
@@ -115,6 +144,7 @@ const CollectionCard = ({ item }) => {
                               User Name
                             </label>
                             <input
+                              name="userName"
                               id="userName"
                               type="text"
                               className="text-gray-200 dark:text-gray-200 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
@@ -131,6 +161,7 @@ const CollectionCard = ({ item }) => {
                             </label>
                             <input
                               id="email"
+                              name="email"
                               className="text-gray-200 dark:text-gray-200 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
                               value={user?.email}
                               disabled
@@ -146,6 +177,7 @@ const CollectionCard = ({ item }) => {
                             <input
                               type="text"
                               id="productName"
+                              name="productName"
                               className="text-gray-200 dark:text-gray-200 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
                               value={book_name}
                               disabled
@@ -160,6 +192,7 @@ const CollectionCard = ({ item }) => {
                             </label>
                             <input
                               id="productPrice"
+                              name="productPrice"
                               className="text-gray-200 dark:text-gray-200 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
                               value={resell_price}
                               disabled
@@ -174,6 +207,7 @@ const CollectionCard = ({ item }) => {
                             </label>
                             <input
                               id="meetingLocation"
+                              name="meetingLocation"
                               type="text"
                               className="text-gray-200 dark:text-gray-200 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
                               placeholder="Meeting Location"
@@ -190,6 +224,7 @@ const CollectionCard = ({ item }) => {
                             <input
                               type="number"
                               id="phoneNumber"
+                              name="phoneNumber"
                               className="text-gray-200 dark:text-gray-200 focus:outline-none focus:border focus:border-indigo-700 dark:focus:border-indigo-700 dark:border-gray-700 dark:bg-gray-800 bg-white font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border shadow"
                               placeholder="Enter your phone number"
                               required
@@ -205,9 +240,12 @@ const CollectionCard = ({ item }) => {
                           below for more details.
                         </p> */}
                         <div className="flex items-center justify-center w-full">
-                          <button className="focus:outline-none transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-4 sm:px-8 py-2 text-xs sm:text-sm">
+                          <input
+                            type="submit"
+                            className="focus:outline-none transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-4 sm:px-8 py-2 text-xs sm:text-sm"
+                          >
                             Submit
-                          </button>
+                          </input>
                           <button
                             className="focus:outline-none ml-3 bg-gray-100 dark:bg-gray-700 dark:border-gray-700 dark:hover:bg-gray-600 transition duration-150 text-gray-600 dark:text-gray-400 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm"
                             onClick={() => setShow(!show)}
@@ -247,7 +285,7 @@ const CollectionCard = ({ item }) => {
                     </button>
                 </div> */}
                 {/* Modal End */}
-              </div>
+              </form>
             </div>
             <button
               id="button"
