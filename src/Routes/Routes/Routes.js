@@ -2,6 +2,7 @@ import AddProduct from "../../Pages/AddProduct/AddProduct";
 import Blog from "../../Pages/Blog/Blog";
 import CategoryCollection from "../../Pages/CategoryCollection/CategoryCollection";
 import Login from "../../Pages/Login/Login";
+import MyOrders from "../../Pages/MyOrders/MyOrders";
 import SellerProducts from "../../Pages/SellerProducts/SellerProducts";
 import ErrorPage from "../../Pages/Shared/Error/ErrorPage";
 import SignUp from "../../Pages/SignUp/SignUp";
@@ -50,7 +51,11 @@ export const router = createBrowserRouter([
         path: "/myproducts",
         element: <SellerProducts></SellerProducts>,
       },
+      {
+        path: "/myorders",
+        element: <MyOrders></MyOrders>,
+      },
     ],
-    errorElement: <ErrorPage></ErrorPage>,
+    // errorElement: <ErrorPage></ErrorPage>,
   },
 ]);

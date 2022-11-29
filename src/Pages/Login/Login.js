@@ -2,9 +2,13 @@ import { GoogleAuthProvider } from "firebase/auth";
 import React, { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
+import useToken from "../../hooks/useToken";
 
 const Login = () => {
   const [showpass, setShowPass] = useState(false);
+
+  const [loginUserEmail, setLoginUserEmail] = useState("");
+  const [token] = useToken(loginUserEmail);
 
   const { logIn, providerLoginGoogle } = useContext(AuthContext);
   const googleProvider = new GoogleAuthProvider();
@@ -14,7 +18,9 @@ const Login = () => {
 
   const from = location.state?.from?.pathname || "/";
 
-  // useTitle("Login");
+  if (token) {
+    navigate(from, { replace: true });
+  }
 
   const handleGoogleSignIn = () => {
     providerLoginGoogle(googleProvider)
@@ -39,7 +45,8 @@ const Login = () => {
         const user = result.user;
 
         console.log(user);
-        navigate(from, { replace: true });
+        setLoginUserEmail(email);
+        // navigate(from, { replace: true });
 
         // const currentUser = {
         //   email: user.email,

@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { Link, Navigate, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
+import useToken from "../../hooks/useToken";
 
 const SignUp = () => {
   const [showpass, setShowPass] = useState(false);
@@ -9,7 +10,12 @@ const SignUp = () => {
   const { createUser, updateUser } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  // useTitle("Sign Up");
+  const [createdUserEmail, setCreatedUserEmail] = useState("");
+  const [token] = useToken(createdUserEmail);
+
+  if (token) {
+    navigate("/");
+  }
 
   const handleSignUp = (event) => {
     event.preventDefault();
@@ -58,10 +64,22 @@ const SignUp = () => {
           toast.success("User created successfully");
         }
 
-        navigate("/");
-      });
-    // .catch((error) => console.error("Save users error: ", error));
+        // getUserToken(email);
+        setCreatedUserEmail(email);
+      })
+      .catch((error) => console.error("Save users error: ", error));
   };
+
+  // const getUserToken = (email) => {
+  //   fetch(`http://localhost:5000/jwt?email=${email}`)
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       if (data.accessToken) {
+  //         localStorage.setItem("accessToken", data.accessToken);
+  //         navigate("/");
+  //       }
+  //     });
+  // };
 
   return (
     <>

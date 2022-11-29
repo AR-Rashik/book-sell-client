@@ -39,6 +39,7 @@ const CollectionCard = ({ item }) => {
       productPrice,
       meetingLocation,
       phoneNumber,
+      image_url,
     };
 
     console.log(booking);
