@@ -15,7 +15,7 @@ const CategoryCollection = () => {
         <div className="flex justify-center">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 lg:mt-16 md:mt-12 mt-8 items-center">
             {items.map((item) => (
-              <CollectionCard item={item}></CollectionCard>
+              <CollectionCard item={item} key={item._id}></CollectionCard>
             ))}
           </div>
         </div>

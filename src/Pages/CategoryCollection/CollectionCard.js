@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import toast from "react-hot-toast";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 
 const CollectionCard = ({ item }) => {
@@ -18,34 +19,49 @@ const CollectionCard = ({ item }) => {
     image_url,
   } = item;
 
-  // const handleAddBooking = (event) => {
-  //   event.preventDefault();
+  const handleAddBooking = (event) => {
+    event.preventDefault();
 
-  //   const form = event.target;
+    const form = event.target;
 
-  //   const
+    const userName = form.userName.value;
+    const email = form.email.value;
+    const productName = form.productName.value;
+    const productPrice = form.productPrice.value;
+    const meetingLocation = form.meetingLocation.value;
+    const phoneNumber = form.phoneNumber.value;
 
-  //   const booking = {
+    const booking = {
+      userName,
+      email,
+      productName,
+      productPrice,
+      meetingLocation,
+      phoneNumber,
+    };
 
-  //   };
+    console.log(booking);
 
-  //   fetch("https://server-home-made.vercel.app/services", {
-  //     method: "POST",
-  //     headers: {
-  //       "content-type": "application/json",
-  //     },
-  //     body: JSON.stringify(service),
-  //   })
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       if (data.acknowledged) {
-  //         setShow(true);
-  //         form.reset();
-  //       }
-  //     })
-  //     .catch((error) => console.error("Item post errors: ", error));
-  // };
+    fetch("http://localhost:5000/bookings", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(booking),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        // setShow(!show);
+
+        if (data.acknowledged) {
+          setShow(!show);
+          toast.success("Booking confirmed");
+          form.reset();
+        }
+      })
+      .catch((error) => console.error("Item post errors: ", error));
+  };
 
   return (
     <div className="mx-2 w-72 lg:mb-0 mb-8 hover:shadow-indigo-200 hover:shadow-2xl transition duration-150 ease-in-out">
@@ -103,7 +119,7 @@ const CollectionCard = ({ item }) => {
           <div className="flex items-center justify-start py-4">
             {/* Modal start*/}
             <div>
-              <form>
+              <form onSubmit={handleAddBooking}>
                 {show && (
                   <div
                     className="py-12 bg-transparent dark:transparent bg-opacity-80 transition duration-150 ease-in-out z-10 absolute top-0 right-0 bottom-0 left-0"
