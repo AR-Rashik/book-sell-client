@@ -1,4 +1,5 @@
 import AddProduct from "../../Pages/AddProduct/AddProduct";
+import AllBuyers from "../../Pages/AllBuyers/AllBuyers";
 import Blog from "../../Pages/Blog/Blog";
 import CategoryCollection from "../../Pages/CategoryCollection/CategoryCollection";
 import Login from "../../Pages/Login/Login";
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
       {
         path: "/myorders",
         element: <MyOrders></MyOrders>,
+      },
+      {
+        path: "/allbuyers",
+        element: <AllBuyers></AllBuyers>,
       },
     ],
     // errorElement: <ErrorPage></ErrorPage>,

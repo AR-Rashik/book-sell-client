@@ -57,6 +57,14 @@ const Header = () => {
                     </li>
                     <li>
                       <Link
+                        to="/allbuyers"
+                        className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                      >
+                        All buyers
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
                         to="/myorders"
                         className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                       >
