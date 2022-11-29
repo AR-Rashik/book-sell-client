@@ -17,6 +17,7 @@ const CollectionCard = ({ item }) => {
     seller_name,
     book_name,
     image_url,
+    product_condition,
   } = item;
 
   const handleAddBooking = (event) => {
@@ -88,13 +89,15 @@ const CollectionCard = ({ item }) => {
             </svg>
           </div>
           <div className="bg-yellow-200 py-1.5 px-6 rounded-full">
-            <p className="text-xs text-yellow-700 font-bold">{}</p>
+            <p className="text-xs text-yellow-700 font-bold">
+              {product_condition}
+            </p>
           </div>
         </div>
         <div className="p-4">
-          <div className="flex justify-between items-center">
-            <h2 className="text-lg font-semibold">{book_name}</h2>
-            <p className="text-xs text-gray-600 pl-5">{posted_time}</p>
+          <div className="flex flex-col justify-center items-start">
+            <h2 className="text-lg font-semibold mb-3">{book_name}</h2>
+            <p className="text-xs text-gray-600">{posted_time}</p>
           </div>
           <p className="text-md text-gray-600 mt-2 text-left">
             <span className="font-semibold">Seller:</span> {seller_name}
@@ -116,7 +119,10 @@ const CollectionCard = ({ item }) => {
               </p>
             </div>
           </div>
-          <div className="flex items-center justify-start py-4">
+          <div className="flex items-center justify-between py-4">
+            <h3 className="text-indigo-700 text-2xl font-semibold">
+              ${resell_price}
+            </h3>
             {/* Modal start*/}
             <div>
               <form onSubmit={handleAddBooking}>
@@ -279,16 +285,15 @@ const CollectionCard = ({ item }) => {
               </form>
             </div>
             {/* Modal end */}
-            <button
-              id="button"
-              className="mx-2 my-2 bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 font-medium text-sm"
-              onClick={() => setShow(!show)}
-            >
-              Book Now
-            </button>
-            <h3 className="text-indigo-700 text-xl font-semibold">
-              ${resell_price}
-            </h3>
+            <div className="">
+              <button
+                id="button"
+                className="bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 font-medium text-sm"
+                onClick={() => setShow(!show)}
+              >
+                Book Now
+              </button>
+            </div>
           </div>
         </div>
       </div>

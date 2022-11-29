@@ -186,3 +186,89 @@
     {/* Modal End */}
   </form>
 </div>;
+<form className="text-center mt-8">
+  <h2 className="focus:outline-none text-center text-3xl lg:text-4xl font-extrabold lg:leading-9 tracking-wider text-gray-900">
+    Add a product
+  </h2>
+  <p className="text-center mt-4 text-gray-600">
+    Want to add a new product? Please fill those requirements.
+  </p>
+  <div className="mt-8 px-4 flex flex-col justify-center items-center">
+    <input
+      required
+      type="text"
+      name="bookName"
+      placeholder="Enter book name"
+      className="md:w-[643px] w-full resize-none focus:outline-none border border-gray-300 px-3 py-3 mb-4"
+    />
+    <input
+      required
+      type="text"
+      name="image_url"
+      placeholder="Enter book image url"
+      className="md:w-[643px] w-full resize-none focus:outline-none border border-gray-300 px-3 py-3 mb-4"
+    />
+    <input
+      required
+      type="number"
+      name="originalPrice"
+      placeholder="Original Price"
+      className="md:w-[643px] w-full resize-none focus:outline-none border border-gray-300 px-3 py-3 mb-4"
+    />
+    <input
+      required
+      type="number"
+      name="resellPrice"
+      placeholder="Resell Price"
+      className="md:w-[643px] w-full resize-none focus:outline-none border border-gray-300 px-3 py-3 mb-4"
+    />
+    <input
+      required
+      type="text"
+      name="postedTime"
+      defaultValue={currentDate}
+      readOnly
+      className="md:w-[643px] w-full resize-none focus:outline-none border border-gray-300 px-3 py-3 mb-4"
+    />
+    <select
+      required
+      name="CategoryId"
+      className="md:w-[643px] w-full resize-none focus:outline-none border border-gray-300 px-3 py-3 mb-4"
+    >
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+    </select>
+    <select
+      required
+      name="CategoryName"
+      className="md:w-[643px] w-full resize-none focus:outline-none border border-gray-300 px-3 py-3 mb-4"
+    >
+      <option value="Action & Adventure">Action & Adventure</option>
+      <option value="Comics & Fantasy">Comics & Fantasy</option>
+      <option value="Literary Fiction.">Literary Fiction.</option>
+    </select>
+    <input
+      required
+      type="number"
+      name="used"
+      placeholder="Used for"
+      className="md:w-[643px] w-full resize-none focus:outline-none border border-gray-300 px-3 py-3 mb-4"
+    />
+    <input
+      required
+      type="text"
+      name="location"
+      placeholder="Location"
+      className="md:w-[643px] w-full resize-none focus:outline-none border border-gray-300 px-3 py-3 mb-4"
+    />
+  </div>
+  <div className="lg:flex justify-center gap-8 text-center lg:mt-6 md:mt-8 mt-8">
+    <input
+      onClick={handleAddProduct}
+      type="submit"
+      value="Submit"
+      className="bg-gray-800 hover:bg-gray-700 transition duration-300 ease-out lg:max-w-[187px] w-full text-white py-3 font-medium text-base"
+    />
+  </div>
+</form>;

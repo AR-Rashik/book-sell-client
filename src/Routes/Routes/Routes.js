@@ -1,3 +1,4 @@
+import AddProduct from "../../Pages/AddProduct/AddProduct";
 import Blog from "../../Pages/Blog/Blog";
 import CategoryCollection from "../../Pages/CategoryCollection/CategoryCollection";
 import Login from "../../Pages/Login/Login";
@@ -40,7 +41,11 @@ export const router = createBrowserRouter([
         loader: ({ params }) =>
           fetch(`http://localhost:5000/categories/${params.id}`),
       },
+      {
+        path: "/addproduct",
+        element: <AddProduct></AddProduct>,
+      },
     ],
-    // errorElement: <ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
   },
 ]);

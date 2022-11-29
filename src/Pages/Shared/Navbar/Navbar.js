@@ -55,14 +55,14 @@ const Header = () => {
                         My Reviews
                       </Link>
                     </li> */}
-                    {/* <li>
+                    <li>
                       <Link
-                        to="/addservice"
+                        to="/addproduct"
                         className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                       >
-                        Add Service
+                        Add Product
                       </Link>
-                    </li> */}
+                    </li>
                     <li>
                       <button
                         onClick={handleLogOut}
