@@ -47,14 +47,14 @@ const Header = () => {
                 </li>
                 {user?.email ? (
                   <>
-                    {/* <li>
+                    <li>
                       <Link
-                        to="/myreviews"
+                        to="/myproducts"
                         className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                       >
-                        My Reviews
+                        My Products
                       </Link>
-                    </li> */}
+                    </li>
                     <li>
                       <Link
                         to="/addproduct"

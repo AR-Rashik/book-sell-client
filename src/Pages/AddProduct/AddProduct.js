@@ -1,9 +1,11 @@
 import React, { useContext } from "react";
 import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Contexts/AuthProvider/AuthProvider";
 
 const AddProduct = () => {
   const { user } = useContext(AuthContext);
+  const navigate = useNavigate();
 
   // currentDate
   const currentDate = new Date().toDateString();
@@ -58,6 +60,7 @@ const AddProduct = () => {
         if (data.acknowledged) {
           toast.success("New product added");
           form.reset();
+          navigate("/myproducts");
         }
       })
       .catch((error) => console.error("Item post errors: ", error));
