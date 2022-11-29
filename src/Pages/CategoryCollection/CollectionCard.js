@@ -61,7 +61,7 @@ const CollectionCard = ({ item }) => {
           form.reset();
         }
       })
-      .catch((error) => console.error("Item post errors: ", error));
+      .catch((error) => console.error("Book booking error: ", error));
   };
 
   return (

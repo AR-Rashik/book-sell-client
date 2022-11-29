@@ -63,7 +63,7 @@ const AddProduct = () => {
           navigate("/myproducts");
         }
       })
-      .catch((error) => console.error("Item post errors: ", error));
+      .catch((error) => console.error("Add products error: ", error));
   };
 
   return (

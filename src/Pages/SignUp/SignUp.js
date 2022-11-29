@@ -23,21 +23,44 @@ const SignUp = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
-        toast.success("User created successfully");
+
         const userInfo = {
           displayName: name,
         };
         updateUser(userInfo)
           .then(() => {
-            navigate("/");
+            saveUser(name, email);
           })
           .catch((err) => {
             console.error("Update user error: ", err);
           });
 
-        form.reset();
+        // form.reset();
       })
       .catch((error) => console.error("Create user error: ", error));
+  };
+
+  const saveUser = (name, email) => {
+    const user = { name, email };
+
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+
+        if (data.acknowledged) {
+          toast.success("User created successfully");
+        }
+
+        navigate("/");
+      });
+    // .catch((error) => console.error("Save users error: ", error));
   };
 
   return (
