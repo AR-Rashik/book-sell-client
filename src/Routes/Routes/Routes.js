@@ -41,6 +41,6 @@ export const router = createBrowserRouter([
           fetch(`http://localhost:5000/categories/${params.id}`),
       },
     ],
-    errorElement: <ErrorPage></ErrorPage>,
+    // errorElement: <ErrorPage></ErrorPage>,
   },
 ]);

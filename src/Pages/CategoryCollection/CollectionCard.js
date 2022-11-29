@@ -101,7 +101,7 @@ const CollectionCard = ({ item }) => {
             </div>
           </div>
           <div className="flex items-center justify-start py-4">
-            {/* Modal */}
+            {/* Modal start*/}
             <div>
               <form>
                 {show && (
@@ -114,27 +114,9 @@ const CollectionCard = ({ item }) => {
                       className="container mx-auto w-11/12 md:w-2/3 max-w-lg"
                     >
                       <div className="relative py-8 px-8 md:px-16 bg-white dark:bg-gray-800 dark:border-gray-700 shadow-md rounded border border-gray-400">
-                        <h3 className="text-center text-gray-800 dark:text-gray-100 font-lg font-bold tracking-normal leading-tight mb-8">
-                          Enter your information
+                        <h3 className="text-center text-indigo-400 dark:text-indigo-400 text-xl font-bold tracking-normal leading-tight mb-8">
+                          Please fill these information
                         </h3>
-                        {/* <div className="w-full flex justify-center text-green-400 mb-4">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            className="icon icon-tabler icon-tabler-circle-check"
-                            width={56}
-                            height={56}
-                            viewBox="0 0 24 24"
-                            strokeWidth={1}
-                            stroke="currentColor"
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          >
-                            <path stroke="none" d="M0 0h24v24H0z" />
-                            <circle cx={12} cy={12} r={9} />
-                            <path d="M9 12l2 2l4 -4" />
-                          </svg>
-                        </div> */}
                         <div className="flex flex-col gap-6 my-5">
                           <div className="flex items-center justify-center gap-5">
                             <label
@@ -231,21 +213,12 @@ const CollectionCard = ({ item }) => {
                             />
                           </div>
                         </div>
-                        {/* <h3 className="text-center text-gray-800 dark:text-gray-100 font-lg font-bold tracking-normal leading-tight mb-4">
-                          Payment Processing Successful
-                        </h3>
-                        <p className="mb-5 text-sm text-gray-600 dark:text-gray-400 text-center font-normal">
-                          Thank you for your payment. An automated payment
-                          receipt will be sent to your email. Check the action
-                          below for more details.
-                        </p> */}
                         <div className="flex items-center justify-center w-full">
                           <input
                             type="submit"
+                            value="Submit"
                             className="focus:outline-none transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-4 sm:px-8 py-2 text-xs sm:text-sm"
-                          >
-                            Submit
-                          </input>
+                          />
                           <button
                             className="focus:outline-none ml-3 bg-gray-100 dark:bg-gray-700 dark:border-gray-700 dark:hover:bg-gray-600 transition duration-150 text-gray-600 dark:text-gray-400 ease-in-out hover:border-gray-400 hover:bg-gray-300 border rounded px-8 py-2 text-sm"
                             onClick={() => setShow(!show)}
@@ -279,14 +252,17 @@ const CollectionCard = ({ item }) => {
                     </div>
                   </div>
                 )}
-                {/* <div className="w-full flex justify-center py-12" id="button">
-                    <button className="focus:outline-none mx-auto transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-4 sm:px-8 py-2 text-xs sm:text-sm" onClick={()=>setShow(!show)}>
-                        Open Modal
-                    </button>
-                </div> */}
-                {/* Modal End */}
+                <div className="w-full flex justify-center py-12" id="button">
+                  {/* <button
+                    className="focus:outline-none mx-auto transition duration-150 ease-in-out hover:bg-indigo-600 bg-indigo-700 rounded text-white px-4 sm:px-8 py-2 text-xs sm:text-sm"
+                    onClick={() => setShow(!show)}
+                  >
+                    Open Modal
+                  </button> */}
+                </div>
               </form>
             </div>
+            {/* Modal end */}
             <button
               id="button"
               className="mx-2 my-2 bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 font-medium text-sm"
