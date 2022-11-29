@@ -14,7 +14,7 @@ const AllBuyers = () => {
       <div className="hidden sm:flex flex-col justify-start items-start">
         <div className="pl-4 lg:px-10 2xl:px-20 flex flex-row justify-center items-end space-x-4">
           <h1 className="text-4xl font-semibold leading-9 text-gray-800">
-            ALL Buyers
+            All Buyers
           </h1>
           <p className="text-base leading-4 text-gray-600 pb-1">
             {allbuyers.length}
@@ -37,7 +37,7 @@ const AllBuyers = () => {
                 EMAIL
               </th>
               <th className="text-base font-medium leading-4 text-gray-600 pl-6 lg:pl-20 2xl:pl-52">
-                MORE OPTIONS
+                MORE OPTION
               </th>
               <th className="text-base font-medium leading-4 text-gray-600 2xl:pl-28 2xl:pr-20 pr-4 lg:pr-10" />
             </tr>
@@ -86,7 +86,7 @@ const AllBuyers = () => {
         <div className="sm:hidden flex flex-col justify-start items-start ">
           <div className="px-4 lg:px-10 2xl:px-20 flex flex-row justify-start items-end space-x-4">
             <p className="text-4xl font-semibold leading-9 text-gray-800">
-              My buyers
+              ALL BUYERS
             </p>
             <p className="text-base leading-4 text-gray-600 pb-1">
               {allbuyers.length}
