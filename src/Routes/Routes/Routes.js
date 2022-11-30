@@ -1,5 +1,6 @@
 import AddProduct from "../../Pages/AddProduct/AddProduct";
 import AllBuyers from "../../Pages/AllBuyers/AllBuyers";
+import AllSellers from "../../Pages/AllSellers/AllSellers";
 import Blog from "../../Pages/Blog/Blog";
 import CategoryCollection from "../../Pages/CategoryCollection/CategoryCollection";
 import Login from "../../Pages/Login/Login";
@@ -76,6 +77,14 @@ export const router = createBrowserRouter([
         element: (
           <AdminRoute>
             <AllBuyers></AllBuyers>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "/allsellers",
+        element: (
+          <AdminRoute>
+            <AllSellers></AllSellers>
           </AdminRoute>
         ),
       },

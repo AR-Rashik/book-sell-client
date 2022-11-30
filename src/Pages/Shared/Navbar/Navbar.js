@@ -70,10 +70,20 @@ const Header = () => {
                           to="/allbuyers"
                           className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
                         >
-                          All buyers
+                          All Buyers
                         </Link>
                       </li>
                     )}
+                    {/* {isAdmin && (
+                      <li>
+                        <Link
+                          to="/allsellers"
+                          className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                        >
+                          All Sellers
+                        </Link>
+                      </li>
+                    )} */}
                     {isBuyer && (
                       <li>
                         <Link

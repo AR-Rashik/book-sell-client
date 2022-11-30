@@ -12,29 +12,29 @@ const Blog = () => {
         <img
           src="https://i.ibb.co/DQ4FZhL/pattern-bg.png"
           alt="blue pattern background"
-          class="absolute w-full h-64 md:h-96 object-center object-fit z-0"
+          className="absolute w-full h-64 md:h-96 object-center object-fit z-0"
         />
-        <div class="relative flex flex-col items-center justify-center sm:px-0 px-6 z-20 pb-32">
-          <div class="md:py-36 py-20">
+        <div className="relative flex flex-col items-center justify-center sm:px-0 px-6 z-20 pb-32">
+          <div className="md:py-36 py-20">
             <h1
               // role="heading"
-              class="xl:text-6xl md:text-5xl text-xl font-bold leading-10 text-white"
+              className="xl:text-6xl md:text-5xl text-xl font-bold leading-10 text-white"
             >
               Blog section
             </h1>
           </div>
-          <div class="lg:w-1/2 md:w-8/12 sm:w-9/12 w-full">
-            <div class="bg-white shadow rounded p-8">
-              <div class="flex items-center justify-between">
+          <div className="lg:w-1/2 md:w-8/12 sm:w-9/12 w-full">
+            <div className="bg-white shadow rounded p-8">
+              <div className="flex items-center justify-between">
                 <div>
-                  <h2 class="text-xl font-semibold leading-none text-gray-800">
+                  <h2 className="text-xl font-semibold leading-none text-gray-800">
                     What are the different ways to manage a state in a React
                     application?
                   </h2>
                 </div>
                 <button
                   onClick={() => setBox1(!box1)}
-                  class="focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 ring-offset-white cursor-pointer"
+                  className="focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 ring-offset-white cursor-pointer"
                 >
                   {box1 ? (
                     <svg
@@ -77,9 +77,9 @@ const Blog = () => {
               </div>
 
               {box1 && (
-                <ul class="">
+                <ul className="">
                   <li>
-                    <p class="text-lg text-left leading-normal text-gray-600 mt-10">
+                    <p className="text-lg text-left leading-normal text-gray-600 mt-10">
                       Managing state in your React apps isn’t as simple as using
                       useState or useReducer. Not only are there are a lot of
                       different kinds of state, but there often dozens of ways
@@ -106,10 +106,10 @@ const Blog = () => {
                 </ul>
               )}
             </div>
-            <div class="bg-white shadow rounded p-8 mt-8">
-              <div class="flex items-center justify-between">
+            <div className="bg-white shadow rounded p-8 mt-8">
+              <div className="flex items-center justify-between">
                 <div>
-                  <h2 class="text-xl font-semibold leading-none text-gray-800">
+                  <h2 className="text-xl font-semibold leading-none text-gray-800">
                     How does prototypical inheritance work?
                   </h2>
                 </div>
@@ -118,7 +118,7 @@ const Blog = () => {
                     setBox2(!box2);
                   }}
                   data-menu
-                  class="focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 ring-offset-white cursor-pointer"
+                  className="focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 ring-offset-white cursor-pointer"
                 >
                   {box2 ? (
                     <svg
@@ -162,7 +162,7 @@ const Blog = () => {
               {box2 && (
                 <ul>
                   <li>
-                    <p class="text-lg leading-normal text-gray-600 mt-10 text-left">
+                    <p className="text-lg leading-normal text-gray-600 mt-10 text-left">
                       In programming, we often want to take something and extend
                       it. <br />
                       For instance, we have a user object with its properties
@@ -191,10 +191,10 @@ const Blog = () => {
                 </ul>
               )}
             </div>
-            <div class="bg-white shadow rounded p-8 mt-8">
-              <div class="flex items-center justify-between">
+            <div className="bg-white shadow rounded p-8 mt-8">
+              <div className="flex items-center justify-between">
                 <div>
-                  <h2 class="text-xl font-semibold leading-none text-gray-800">
+                  <h2 className="text-xl font-semibold leading-none text-gray-800">
                     What is a unit test? Why should we write unit tests?
                   </h2>
                 </div>
@@ -203,7 +203,7 @@ const Blog = () => {
                     setBox3(!box3);
                   }}
                   data-menu
-                  class="focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 ring-offset-white cursor-pointer"
+                  className="focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 ring-offset-white cursor-pointer"
                 >
                   {box3 ? (
                     <svg
@@ -247,7 +247,7 @@ const Blog = () => {
               {box3 && (
                 <ul>
                   <li>
-                    <p class="text-lg leading-normal text-gray-600 mt-10 text-left">
+                    <p className="text-lg leading-normal text-gray-600 mt-10 text-left">
                       In the world of testing, checking a single functionality
                       is quite different from testing a whole application
                       end-to-end. While both are equally important, testing each
@@ -297,17 +297,17 @@ const Blog = () => {
                 </ul>
               )}
             </div>
-            <div class="bg-white shadow rounded p-8 mt-8">
-              <div class="flex items-center justify-between">
+            <div className="bg-white shadow rounded p-8 mt-8">
+              <div className="flex items-center justify-between">
                 <div>
-                  <h2 class="text-xl font-semibold leading-none text-gray-800">
+                  <h2 className="text-xl font-semibold leading-none text-gray-800">
                     React vs. Angular vs. Vue?
                   </h2>
                 </div>
                 <button
                   onClick={() => setBox4(!box4)}
                   data-menu
-                  class="focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 ring-offset-white cursor-pointer"
+                  className="focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:ring-offset-2 ring-offset-white cursor-pointer"
                 >
                   {box4 ? (
                     <svg
@@ -351,7 +351,7 @@ const Blog = () => {
               {box4 && (
                 <ul>
                   <li>
-                    <p class="text-lg leading-normal text-gray-600 mt-10 text-left">
+                    <p className="text-lg leading-normal text-gray-600 mt-10 text-left">
                       This post is a comprehensive guide on which is perhaps the
                       right solution for you: Angular vs React vs Vue. <br />
                       Just a couple of years ago, developers were mainly

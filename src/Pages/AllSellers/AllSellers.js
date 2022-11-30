@@ -2,7 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import React from "react";
 import toast from "react-hot-toast";
 
-const AllBuyers = () => {
+const AllSellers = () => {
   const { data: allbuyers = [], refetch } = useQuery({
     queryKey: ["allbuyers"],
     queryFn: () =>
@@ -63,7 +63,7 @@ const AllBuyers = () => {
           <tbody className="w-full text-left">
             {allbuyers.map(
               (buyer, i) =>
-                buyer?.role === "buyer" && (
+                buyer?.role === "seller" && (
                   <tr key={i} className="border-gray-200 border-b  ">
                     <th>
                       <div className="h-32 w-32 mb-4 lg:mb-0 my-4 ml-12">
@@ -117,50 +117,53 @@ const AllBuyers = () => {
               <span>{allbuyers.length === 1 ? " item" : " items"}</span>
             </p>
           </div>
-          {allbuyers.map((buyer, i) => (
-            <div key={i} className="border-gray-200 border-b pb-10">
-              <div className="px-4 flex flex-col justify-center items-start mt-10">
-                <div className="h-32 w-32 mb-4 lg:mb-0 my-4 mx-auto">
-                  <img
-                    src="https://tuk-cdn.s3.amazonaws.com/assets/components/avatars/a_3_7.png"
-                    alt=""
-                    className="h-full w-full rounded-full overflow-hidden shadow"
-                  />
+          {allbuyers.map(
+            (buyer, i) =>
+              buyer?.role === "seller" && (
+                <div key={i} className="border-gray-200 border-b pb-10">
+                  <div className="px-4 flex flex-col justify-center items-start mt-10">
+                    <div className="h-32 w-32 mb-4 lg:mb-0 my-4 mx-auto">
+                      <img
+                        src="https://tuk-cdn.s3.amazonaws.com/assets/components/avatars/a_3_7.png"
+                        alt=""
+                        className="h-full w-full rounded-full overflow-hidden shadow"
+                      />
+                    </div>
+                  </div>
+                  <div className="px-4 mt-6 flex justify-between w-full flex justify-center items-center">
+                    <div>
+                      <p className="w-36 text-base leading-6 text-gray-800">
+                        {buyer?.name}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-base font-semibold leading-4 text-gray-800">
+                        {buyer?.email}
+                      </p>
+                    </div>
+                  </div>
+                  <div className="px-4 mt-6 flex justify-between w-full flex justify-center items-center">
+                    <div>
+                      <a
+                        href="/"
+                        className="hover:underline text-base font-medium leading-none focus:outline-none focus:underline  text-gray-800"
+                      >
+                        {" "}
+                        View details
+                      </a>
+                    </div>
+                    <div>
+                      <button
+                        onClick={() => handleDelete(buyer?._id)}
+                        className="bg-red-600 focus:ring-red-800 focus:ring-offset-2 focus:ring-2 transition duration-150 ease-in-out hover:bg-red-700 rounded text-white px-6 py-2 font-medium text-sm"
+                      >
+                        DELETE
+                      </button>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="px-4 mt-6 flex justify-between w-full flex justify-center items-center">
-                <div>
-                  <p className="w-36 text-base leading-6 text-gray-800">
-                    {buyer?.name}
-                  </p>
-                </div>
-                <div>
-                  <p className="text-base font-semibold leading-4 text-gray-800">
-                    {buyer?.email}
-                  </p>
-                </div>
-              </div>
-              <div className="px-4 mt-6 flex justify-between w-full flex justify-center items-center">
-                <div>
-                  <a
-                    href="/"
-                    className="hover:underline text-base font-medium leading-none focus:outline-none focus:underline  text-gray-800"
-                  >
-                    {" "}
-                    View details
-                  </a>
-                </div>
-                <div>
-                  <button
-                    onClick={() => handleDelete(buyer?._id)}
-                    className="bg-red-600 focus:ring-red-800 focus:ring-offset-2 focus:ring-2 transition duration-150 ease-in-out hover:bg-red-700 rounded text-white px-6 py-2 font-medium text-sm"
-                  >
-                    DELETE
-                  </button>
-                </div>
-              </div>
-            </div>
-          ))}
+              )
+          )}
         </div>
       </div>
       {/* Mobile Responsive End */}
@@ -168,4 +171,4 @@ const AllBuyers = () => {
   );
 };
 
-export default AllBuyers;
+export default AllSellers;
