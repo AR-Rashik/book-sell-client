@@ -74,7 +74,7 @@ const Header = () => {
                         </Link>
                       </li>
                     )}
-                    {/* {isAdmin && (
+                    {isAdmin && (
                       <li>
                         <Link
                           to="/allsellers"
@@ -83,7 +83,7 @@ const Header = () => {
                           All Sellers
                         </Link>
                       </li>
-                    )} */}
+                    )}
                     {isBuyer && (
                       <li>
                         <Link

@@ -34,10 +34,10 @@ const AllBuyers = () => {
           <h1 className="text-4xl font-semibold leading-9 text-gray-800">
             All Buyers
           </h1>
-          <p className="text-base leading-4 text-gray-600 pb-1">
+          {/* <p className="text-base leading-4 text-gray-600 pb-1">
             {allbuyers.length}
             <span>{allbuyers.length === 1 ? " item" : " items"}</span>
-          </p>
+          </p> */}
         </div>
         <table className="w-full mt-16 whitespace-nowrap">
           <thead
@@ -112,10 +112,10 @@ const AllBuyers = () => {
             <p className="text-4xl font-semibold leading-9 text-gray-800">
               ALL BUYERS
             </p>
-            <p className="text-base leading-4 text-gray-600 pb-1">
+            {/* <p className="text-base leading-4 text-gray-600 pb-1">
               {allbuyers.length}
               <span>{allbuyers.length === 1 ? " item" : " items"}</span>
-            </p>
+            </p> */}
           </div>
           {allbuyers.map((buyer, i) => (
             <div key={i} className="border-gray-200 border-b pb-10">

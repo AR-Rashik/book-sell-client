@@ -32,12 +32,12 @@ const AllSellers = () => {
       <div className="hidden sm:flex flex-col justify-start items-start">
         <div className="pl-4 lg:px-10 2xl:px-20 flex flex-row justify-center items-end space-x-4">
           <h1 className="text-4xl font-semibold leading-9 text-gray-800">
-            All Buyers
+            All Sellers
           </h1>
-          <p className="text-base leading-4 text-gray-600 pb-1">
+          {/* <p className="text-base leading-4 text-gray-600 pb-1">
             {allbuyers.length}
             <span>{allbuyers.length === 1 ? " item" : " items"}</span>
-          </p>
+          </p> */}
         </div>
         <table className="w-full mt-16 whitespace-nowrap">
           <thead
@@ -83,12 +83,9 @@ const AllSellers = () => {
                       <p className>{buyer?.email}</p>
                     </th>
                     <th className="my-10 text-base font-medium leading-4 text-gray-600 pl-6 lg:pl-20 2xl:pl-52">
-                      <a
-                        href="/"
-                        className="hover:underline text-base font-medium leading-none  text-gray-800 focus:outline-none focus:underline"
-                      >
-                        View details
-                      </a>
+                      <button className="bg-sky-600 focus:ring-sky-800 focus:ring-offset-2 focus:ring-2 transition duration-150 ease-in-out hover:bg-sky-700 rounded text-white px-6 py-2 font-medium text-sm">
+                        VERIFY
+                      </button>
                     </th>
                     <th className="my-10 pl-4 lg:pl-12  2xl:pl-28 pr-4 2xl:pr-20">
                       <button
@@ -110,12 +107,12 @@ const AllSellers = () => {
         <div className="sm:hidden flex flex-col justify-start items-start ">
           <div className="px-4 lg:px-10 2xl:px-20 flex flex-row justify-start items-end space-x-4">
             <p className="text-4xl font-semibold leading-9 text-gray-800">
-              ALL BUYERS
+              ALL Sellers
             </p>
-            <p className="text-base leading-4 text-gray-600 pb-1">
+            {/* <p className="text-base leading-4 text-gray-600 pb-1">
               {allbuyers.length}
               <span>{allbuyers.length === 1 ? " item" : " items"}</span>
-            </p>
+            </p> */}
           </div>
           {allbuyers.map(
             (buyer, i) =>
@@ -144,13 +141,9 @@ const AllSellers = () => {
                   </div>
                   <div className="px-4 mt-6 flex justify-between w-full flex justify-center items-center">
                     <div>
-                      <a
-                        href="/"
-                        className="hover:underline text-base font-medium leading-none focus:outline-none focus:underline  text-gray-800"
-                      >
-                        {" "}
-                        View details
-                      </a>
+                      <button className="bg-sky-600 focus:ring-sky-800 focus:ring-offset-2 focus:ring-2 transition duration-150 ease-in-out hover:bg-sky-700 rounded text-white px-6 py-2 font-medium text-sm">
+                        VERIFY
+                      </button>
                     </div>
                     <div>
                       <button
