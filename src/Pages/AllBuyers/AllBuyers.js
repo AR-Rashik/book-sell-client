@@ -6,11 +6,13 @@ const AllBuyers = () => {
   const { data: allbuyers = [], refetch } = useQuery({
     queryKey: ["allbuyers"],
     queryFn: () =>
-      fetch("http://localhost:5000/allbuyers").then((res) => res.json()),
+      fetch("https://book-sell-server.vercel.app/allbuyers").then((res) =>
+        res.json()
+      ),
   });
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5000/users/${id}`, {
+    fetch(`https://book-sell-server.vercel.app/users/${id}`, {
       method: "DELETE",
       headers: {
         authorization: `bearer ${localStorage.getItem("accessToken")}`,

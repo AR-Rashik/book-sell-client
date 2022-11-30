@@ -8,11 +8,13 @@ const Categories = () => {
   const { data: categories = [] } = useQuery({
     queryKey: ["categories"],
     queryFn: () =>
-      fetch("http://localhost:5000/categories").then((res) => res.json()),
+      fetch("https://book-sell-server.vercel.app/categories").then((res) =>
+        res.json()
+      ),
   });
 
   // useEffect(() => {
-  //   fetch("http://localhost:5000/categories")
+  //   fetch("https://book-sell-server.vercel.app/categories")
   //     .then((res) => res.json())
   //     .then((data) => setCategories(data));
   // }, []);
