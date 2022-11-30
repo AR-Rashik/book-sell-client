@@ -5,6 +5,7 @@ import Blog from "../../Pages/Blog/Blog";
 import CategoryCollection from "../../Pages/CategoryCollection/CategoryCollection";
 import Login from "../../Pages/Login/Login";
 import MyOrders from "../../Pages/MyOrders/MyOrders";
+import MtWishlist from "../../Pages/MyWishtlist/MtWishlist";
 import SellerProducts from "../../Pages/SellerProducts/SellerProducts";
 import ErrorPage from "../../Pages/Shared/Error/ErrorPage";
 import SignUp from "../../Pages/SignUp/SignUp";
@@ -86,6 +87,14 @@ export const router = createBrowserRouter([
           <AdminRoute>
             <AllSellers></AllSellers>
           </AdminRoute>
+        ),
+      },
+      {
+        path: "/mywishlist",
+        element: (
+          <BuyerRoute>
+            <MtWishlist></MtWishlist>
+          </BuyerRoute>
         ),
       },
     ],

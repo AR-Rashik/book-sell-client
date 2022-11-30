@@ -120,13 +120,9 @@ const SellerProducts = () => {
               </div>
               <div className="px-4 mt-6 flex justify-between w-full flex justify-center items-center">
                 <div>
-                  <a
-                    href="/"
-                    className="hover:underline text-base font-medium leading-none focus:outline-none focus:underline  text-gray-800"
-                  >
-                    {" "}
-                    View details
-                  </a>
+                  <button className="bg-sky-600 focus:ring-sky-800 focus:ring-offset-2 focus:ring-2 transition duration-150 ease-in-out hover:bg-sky-700 rounded text-white px-6 py-2 font-medium text-sm">
+                    ADVERTISE
+                  </button>
                 </div>
                 <div>
                   <button className="focus:outline-none focus:ring-red-800 focus:ring-offset-2 focus:ring-2 text-base leading-none text-red-600 hover:text-red-800">

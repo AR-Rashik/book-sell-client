@@ -27,11 +27,11 @@ const WrokingSection = () => {
                 </div>
                 <div className="flex mt-12 flex-col items-center lg:items-end md:w-8/12">
                   <h1 className="focus:outline-none text-xl font-bold leading-5">
-                    Create a Wallet
+                    Select your preferred books
                   </h1>
                   <h2 className="focus:outline-none text-gray-500 mt-3 pl-3 text-center md:text-right text-base leading-6 tracking-wide">
-                    Create a wallet by linking a payment method that you’re
-                    comfortable with. Paypal, Visa and more{" "}
+                    Select a books by clicking on the books that are shown and
+                    add wishlist or book it{" "}
                   </h2>
                 </div>
                 <div aria-label="transactions" role="img">
@@ -79,11 +79,10 @@ const WrokingSection = () => {
                 </div>
                 <div className="flex mt-6 flex-col items-center md:items-start md:w-8/12">
                   <h1 className="focus:outline-none text-xl font-bold leading-5">
-                    Start your Transactions
+                    Give payment
                   </h1>
                   <h2 className="focus:outline-none text-gray-500 mt-3 text-base leading-6 tracking-wide">
-                    Start transactions right away. No more complicated process
-                    for anything else.
+                    Give required the payment to purchase the book.
                   </h2>
                 </div>
               </div>

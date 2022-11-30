@@ -150,6 +150,7 @@ const Banner = () => {
                   role="img"
                   aria-label="people smiling"
                   className="mx-auto"
+                  alt=""
                   src="https://images.pexels.com/photos/1926987/pexels-photo-1926987.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
                 />
               </div>
@@ -158,22 +159,22 @@ const Banner = () => {
                   tabIndex="0"
                   className="text-indigo-700 uppercase text-2xl mb-4"
                 >
-                  Qusique Tincidun sapien
+                  SECOND HAND BOOK SELL
                 </p>
                 <h1
                   tabIndex="0"
                   className="text-indigo-700 text-4xl lg:text-6xl font-black mb-8"
                 >
-                  All natural ingredients
+                  All Kinds of Books
                 </h1>
                 <p tabIndex="0" className="text-gray-800 font-regular mb-8">
-                  COMBINING SCIENCE WITH BEAUTY. L'Oreal Paris offerincare
-                  products is developed and rigorously tested with leading
-                  scientists. Indulge yourself in a luxurious and sensorial
-                  skincare experience. Cutting-edge innovations, proven by
-                  Science.
+                  Best selling books on social media & society, IT &
+                  cybersecurity, art & music, fun & game. Seminal book on
+                  Counterterrorism and Cybersecurity: Total Information
+                  Awareness. Nonprofit Organization. Lasting Peace. Create A
+                  Better World. Universal Rights.
                 </p>
-                <div className="bg-white lg:mt-16 py-4 px-4 flex flex-col sm:flex-row justify-start sm:justify-between items-start sm:items-center shadow-lg rounded-lg">
+                {/* <div className="bg-white lg:mt-16 py-4 px-4 flex flex-col sm:flex-row justify-start sm:justify-between items-start sm:items-center shadow-lg rounded-lg">
                   <div className="sm:flex items-center py-2">
                     <div className="flex items-center">
                       <img
@@ -224,7 +225,7 @@ const Banner = () => {
                       className="sm:hidden border-b border-gray-300 w-full bg-transparent pr-6"
                     />
                   </button>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -94,6 +94,16 @@ const Header = () => {
                         </Link>
                       </li>
                     )}
+                    {isBuyer && (
+                      <li>
+                        <Link
+                          to="/mywishlist"
+                          className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                        >
+                          My Wishlist
+                        </Link>
+                      </li>
+                    )}
                     {isSeller && (
                       <li>
                         <Link
@@ -292,24 +302,68 @@ const Header = () => {
                     </div>
                   </Link>
                 </li>
-                {/* {user?.email ? (
+                {user?.email ? (
                   <>
-                    <li>
-                      <Link
-                        to="/myreviews"
-                        className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
-                      >
-                        My Reviews
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        to="/addservice"
-                        className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
-                      >
-                        Add Service
-                      </Link>
-                    </li>
+                    {isSeller && (
+                      <li>
+                        <Link
+                          to="/myproducts"
+                          className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                        >
+                          My Products
+                        </Link>
+                      </li>
+                    )}
+                    {isAdmin && (
+                      <li>
+                        <Link
+                          to="/allbuyers"
+                          className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                        >
+                          All Buyers
+                        </Link>
+                      </li>
+                    )}
+                    {isAdmin && (
+                      <li>
+                        <Link
+                          to="/allsellers"
+                          className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                        >
+                          All Sellers
+                        </Link>
+                      </li>
+                    )}
+                    {isBuyer && (
+                      <li>
+                        <Link
+                          to="/myorders"
+                          className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                        >
+                          My Orders
+                        </Link>
+                      </li>
+                    )}
+                    {isBuyer && (
+                      <li>
+                        <Link
+                          to="/mywishlist"
+                          className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                        >
+                          My Wishlist
+                        </Link>
+                      </li>
+                    )}
+                    {isSeller && (
+                      <li>
+                        <Link
+                          to="/addproduct"
+                          className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                        >
+                          Add Product
+                        </Link>
+                      </li>
+                    )}
                     <li>
                       <button
                         onClick={handleLogOut}
@@ -328,7 +382,7 @@ const Header = () => {
                       Login
                     </Link>
                   </li>
-                )} */}
+                )}
               </ul>
             </div>
           </div>
