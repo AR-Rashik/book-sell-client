@@ -28,3 +28,7 @@ This project is created by using React and Tailwind CSS.
 ### Learn more
 
 ### Live site: [bookSell](https://book-sell-c73fc.web.app/).
+
+# adminEmail: rohmot@ali.com
+
+# adminPassword: 10191019
