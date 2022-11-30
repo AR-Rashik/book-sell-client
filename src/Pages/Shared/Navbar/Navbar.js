@@ -1,12 +1,15 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Contexts/AuthProvider/AuthProvider";
+import useAdmin from "../../../hooks/useAdmin";
 
 const Header = () => {
   const [mdOptionsToggle, setMdOptionsToggle] = useState(true);
   const [showMenu, setShowMenu] = useState(false);
 
   const { user, logOut } = useContext(AuthContext);
+
+  const [isAdmin] = useAdmin(user?.email);
 
   const handleLogOut = () => {
     logOut()
@@ -55,14 +58,16 @@ const Header = () => {
                         My Products
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to="/allbuyers"
-                        className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
-                      >
-                        All buyers
-                      </Link>
-                    </li>
+                    {isAdmin && (
+                      <li>
+                        <Link
+                          to="/allbuyers"
+                          className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                        >
+                          All buyers
+                        </Link>
+                      </li>
+                    )}
                     <li>
                       <Link
                         to="/myorders"

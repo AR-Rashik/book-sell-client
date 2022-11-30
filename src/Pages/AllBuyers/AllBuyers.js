@@ -43,40 +43,43 @@ const AllBuyers = () => {
             </tr>
           </thead>
           <tbody className="w-full text-left">
-            {allbuyers.map((buyer, i) => (
-              <tr key={i} className="border-gray-200 border-b  ">
-                <th>
-                  <div className="h-32 w-32 mb-4 lg:mb-0 my-4 ml-12">
-                    <img
-                      src="https://tuk-cdn.s3.amazonaws.com/assets/components/avatars/a_3_7.png"
-                      alt=""
-                      className="h-full w-full rounded-full overflow-hidden shadow"
-                    />
-                  </div>
-                </th>
-                <th className="mt-10 text-base font-medium leading-4 text-gray-600 pl-6 lg:pl-20 2xl:pl-52">
-                  <p className=" text-base leading-4 text-gray-800">
-                    {buyer?.name}
-                  </p>
-                </th>
-                <th className="my-10  pl-6 lg:pl-20 2xl:pl-52">
-                  <p className>{buyer?.email}</p>
-                </th>
-                <th className="my-10 text-base font-medium leading-4 text-gray-600 pl-6 lg:pl-20 2xl:pl-52">
-                  <a
-                    href="/"
-                    className="hover:underline text-base font-medium leading-none  text-gray-800 focus:outline-none focus:underline"
-                  >
-                    View details
-                  </a>
-                </th>
-                <th className="my-10 pl-4 lg:pl-12  2xl:pl-28 pr-4 2xl:pr-20">
-                  <button className="bg-red-600 focus:ring-red-800 focus:ring-offset-2 focus:ring-2 transition duration-150 ease-in-out hover:bg-red-700 rounded text-white px-6 py-2 font-medium text-sm">
-                    DELETE
-                  </button>
-                </th>
-              </tr>
-            ))}
+            {allbuyers.map(
+              (buyer, i) =>
+                buyer?.role === "admin" || (
+                  <tr key={i} className="border-gray-200 border-b  ">
+                    <th>
+                      <div className="h-32 w-32 mb-4 lg:mb-0 my-4 ml-12">
+                        <img
+                          src="https://tuk-cdn.s3.amazonaws.com/assets/components/avatars/a_3_7.png"
+                          alt=""
+                          className="h-full w-full rounded-full overflow-hidden shadow"
+                        />
+                      </div>
+                    </th>
+                    <th className="mt-10 text-base font-medium leading-4 text-gray-600 pl-6 lg:pl-20 2xl:pl-52">
+                      <p className=" text-base leading-4 text-gray-800">
+                        {buyer?.name}
+                      </p>
+                    </th>
+                    <th className="my-10  pl-6 lg:pl-20 2xl:pl-52">
+                      <p className>{buyer?.email}</p>
+                    </th>
+                    <th className="my-10 text-base font-medium leading-4 text-gray-600 pl-6 lg:pl-20 2xl:pl-52">
+                      <a
+                        href="/"
+                        className="hover:underline text-base font-medium leading-none  text-gray-800 focus:outline-none focus:underline"
+                      >
+                        View details
+                      </a>
+                    </th>
+                    <th className="my-10 pl-4 lg:pl-12  2xl:pl-28 pr-4 2xl:pr-20">
+                      <button className="bg-red-600 focus:ring-red-800 focus:ring-offset-2 focus:ring-2 transition duration-150 ease-in-out hover:bg-red-700 rounded text-white px-6 py-2 font-medium text-sm">
+                        DELETE
+                      </button>
+                    </th>
+                  </tr>
+                )
+            )}
           </tbody>
         </table>
       </div>

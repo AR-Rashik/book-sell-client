@@ -22,6 +22,7 @@ const SignUp = () => {
 
     const form = event.target;
     const name = form.name.value;
+    const option = form.option.value;
     const email = form.email.value;
     const password = form.password.value;
 
@@ -35,7 +36,7 @@ const SignUp = () => {
         };
         updateUser(userInfo)
           .then(() => {
-            saveUser(name, email);
+            saveUser(name, email, option);
           })
           .catch((err) => {
             console.error("Update user error: ", err);
@@ -46,8 +47,8 @@ const SignUp = () => {
       .catch((error) => console.error("Create user error: ", error));
   };
 
-  const saveUser = (name, email) => {
-    const user = { name, email };
+  const saveUser = (name, email, option) => {
+    const user = { name, email, role: option };
 
     fetch("http://localhost:5000/users", {
       method: "POST",
@@ -126,6 +127,27 @@ const SignUp = () => {
                 className="bg-gray-200 border rounded text-xs font-medium leading-none placeholder-gray-800 text-gray-800 py-3 w-full pl-3 mt-2"
                 placeholder="Your name"
               />
+            </div>
+            <div className="my-4">
+              <label
+                htmlFor="option"
+                className="text-sm font-medium leading-none text-gray-800"
+              >
+                {" "}
+                Buyer or Seller?{" "}
+              </label>
+              <select
+                required
+                name="option"
+                id="option"
+                aria-labelledby="option"
+                className="bg-gray-200 border rounded text-xs font-medium leading-none placeholder-gray-800 text-gray-800 py-3 w-full pl-3 mt-2"
+              >
+                <option value="buyer" selected>
+                  buyer
+                </option>
+                <option value="seller">seller</option>
+              </select>
             </div>
             <div>
               <label

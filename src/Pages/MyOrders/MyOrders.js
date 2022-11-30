@@ -55,35 +55,36 @@ const MyOrders = () => {
             </tr>
           </thead>
           <tbody className="w-full text-left">
-            {myorders.map((order, i) => (
-              <tr key={i} className="border-gray-200 border-b  ">
-                <th>
-                  <img
-                    className="my-10 pl-4 lg:pl-10 2xl:pl-20"
-                    src={order?.image_url}
-                    alt="shoe"
-                  />
-                </th>
-                <th className="mt-10 text-base font-medium leading-4 text-gray-600 pl-6 lg:pl-20 2xl:pl-52">
-                  <p className=" text-base leading-4 text-gray-800">
-                    {order?.productName}
-                  </p>
-                </th>
-                <th className="my-10  pl-6 lg:pl-20 2xl:pl-52">
-                  <p className>{order?.productPrice}</p>
-                </th>
-                <th className="my-10 text-base font-medium leading-4 text-gray-600 pl-6 lg:pl-20 2xl:pl-52">
-                  <button className="bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 font-medium text-sm">
-                    Pay
-                  </button>
-                </th>
-                <th className="my-10 pl-4 lg:pl-12  2xl:pl-28 pr-4 2xl:pr-20">
-                  <button className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-800 text-base leading-none text-red-600 hover:text-red-800">
-                    <p>Remove Item</p>
-                  </button>
-                </th>
-              </tr>
-            ))}
+            {myorders &&
+              myorders?.map((order, i) => (
+                <tr key={i} className="border-gray-200 border-b  ">
+                  <th>
+                    <img
+                      className="my-10 pl-4 lg:pl-10 2xl:pl-20"
+                      src={order?.image_url}
+                      alt="shoe"
+                    />
+                  </th>
+                  <th className="mt-10 text-base font-medium leading-4 text-gray-600 pl-6 lg:pl-20 2xl:pl-52">
+                    <p className=" text-base leading-4 text-gray-800">
+                      {order?.productName}
+                    </p>
+                  </th>
+                  <th className="my-10  pl-6 lg:pl-20 2xl:pl-52">
+                    <p className>{order?.productPrice}</p>
+                  </th>
+                  <th className="my-10 text-base font-medium leading-4 text-gray-600 pl-6 lg:pl-20 2xl:pl-52">
+                    <button className="bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-6 py-2 font-medium text-sm">
+                      Pay
+                    </button>
+                  </th>
+                  <th className="my-10 pl-4 lg:pl-12  2xl:pl-28 pr-4 2xl:pr-20">
+                    <button className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-800 text-base leading-none text-red-600 hover:text-red-800">
+                      <p>Remove Item</p>
+                    </button>
+                  </th>
+                </tr>
+              ))}
           </tbody>
         </table>
       </div>
