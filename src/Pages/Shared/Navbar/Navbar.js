@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Contexts/AuthProvider/AuthProvider";
 import useAdmin from "../../../hooks/useAdmin";
+import useBuyer from "../../../hooks/useBuyer";
 import useSeller from "../../../hooks/useSeller";
 
 const Header = () => {
@@ -12,6 +13,7 @@ const Header = () => {
 
   const [isAdmin] = useAdmin(user?.email);
   const [isSeller] = useSeller(user?.email);
+  const [isBuyer] = useBuyer(user?.email);
 
   const handleLogOut = () => {
     logOut()
@@ -72,14 +74,16 @@ const Header = () => {
                         </Link>
                       </li>
                     )}
-                    <li>
-                      <Link
-                        to="/myorders"
-                        className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
-                      >
-                        My Orders
-                      </Link>
-                    </li>
+                    {isBuyer && (
+                      <li>
+                        <Link
+                          to="/myorders"
+                          className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                        >
+                          My Orders
+                        </Link>
+                      </li>
+                    )}
                     {isSeller && (
                       <li>
                         <Link

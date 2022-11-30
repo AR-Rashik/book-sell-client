@@ -8,6 +8,7 @@ import SellerProducts from "../../Pages/SellerProducts/SellerProducts";
 import ErrorPage from "../../Pages/Shared/Error/ErrorPage";
 import SignUp from "../../Pages/SignUp/SignUp";
 import AdminRoute from "../AdminRoute/AdminRoute";
+import BuyerRoute from "../BuyerRoute/BuyerRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import SellerRoute from "../SellerRoute/SellerRoute";
 
@@ -65,9 +66,9 @@ export const router = createBrowserRouter([
       {
         path: "/myorders",
         element: (
-          <PrivateRoute>
+          <BuyerRoute>
             <MyOrders></MyOrders>
-          </PrivateRoute>
+          </BuyerRoute>
         ),
       },
       {
