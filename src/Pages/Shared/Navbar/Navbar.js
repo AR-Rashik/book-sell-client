@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Contexts/AuthProvider/AuthProvider";
 import useAdmin from "../../../hooks/useAdmin";
+import useSeller from "../../../hooks/useSeller";
 
 const Header = () => {
   const [mdOptionsToggle, setMdOptionsToggle] = useState(true);
@@ -10,6 +11,7 @@ const Header = () => {
   const { user, logOut } = useContext(AuthContext);
 
   const [isAdmin] = useAdmin(user?.email);
+  const [isSeller] = useSeller(user?.email);
 
   const handleLogOut = () => {
     logOut()
@@ -50,14 +52,16 @@ const Header = () => {
                 </li>
                 {user?.email ? (
                   <>
-                    <li>
-                      <Link
-                        to="/myproducts"
-                        className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
-                      >
-                        My Products
-                      </Link>
-                    </li>
+                    {isSeller && (
+                      <li>
+                        <Link
+                          to="/myproducts"
+                          className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                        >
+                          My Products
+                        </Link>
+                      </li>
+                    )}
                     {isAdmin && (
                       <li>
                         <Link
@@ -76,14 +80,16 @@ const Header = () => {
                         My Orders
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        to="/addproduct"
-                        className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
-                      >
-                        Add Product
-                      </Link>
-                    </li>
+                    {isSeller && (
+                      <li>
+                        <Link
+                          to="/addproduct"
+                          className="dark:text-white text-base text-gray-800 focus:outline-none focus:ring-2 focus:ring-gray-800 hover:underline"
+                        >
+                          Add Product
+                        </Link>
+                      </li>
+                    )}
                     <li>
                       <button
                         onClick={handleLogOut}

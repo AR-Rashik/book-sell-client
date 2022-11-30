@@ -9,6 +9,7 @@ import ErrorPage from "../../Pages/Shared/Error/ErrorPage";
 import SignUp from "../../Pages/SignUp/SignUp";
 import AdminRoute from "../AdminRoute/AdminRoute";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import SellerRoute from "../SellerRoute/SellerRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../../Layout/Main");
@@ -47,11 +48,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "/addproduct",
-        element: <AddProduct></AddProduct>,
+        element: (
+          <SellerRoute>
+            <AddProduct></AddProduct>
+          </SellerRoute>
+        ),
       },
       {
         path: "/myproducts",
-        element: <SellerProducts></SellerProducts>,
+        element: (
+          <SellerRoute>
+            <SellerProducts></SellerProducts>
+          </SellerRoute>
+        ),
       },
       {
         path: "/myorders",
