@@ -98,6 +98,6 @@ export const router = createBrowserRouter([
         ),
       },
     ],
-    // errorElement: <ErrorPage></ErrorPage>,
+    errorElement: <ErrorPage></ErrorPage>,
   },
 ]);
